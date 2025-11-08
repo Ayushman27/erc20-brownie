@@ -10,5 +10,8 @@ token_symbol = "TKN"
 def main():
     account = get_account()
     erc20 = TokenERC20.deploy(
-        initial_supply, token_name, token_symbol, {"from": account}
+        initial_supply,
+        token_name,
+        token_symbol,
+        {"from": account, "gas_price": 60 * 10**9}
     )
